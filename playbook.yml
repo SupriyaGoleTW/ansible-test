@@ -1,0 +1,8 @@
+---
+- hosts: webservers1
+  roles:
+    - go-server
+
+- hosts: webservers2
+  roles:
+    - go-agent

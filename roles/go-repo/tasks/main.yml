@@ -1,0 +1,9 @@
+- name: downloading go-server using yum repo
+  become: yes
+  yum_repository:
+    name: gocd agent
+    description: go repo
+    baseurl: https://download.gocd.io
+    enabled: 1
+    gpgcheck: 1
+    gpgkey: https://download.gocd.io/GOCD-GPG-KEY.asc

@@ -1,0 +1,11 @@
+- name: Downloading jdk
+  become: yes
+  get_url:
+    url: http://download.oracle.com/otn-pub/java/jdk/8u102-b14/jdk-8u102-linux-x64.rpm
+    dest: /opt/jdk-8u102-linux-x64.rpm
+    headers: "Cookie: oraclelicense=accept-securebackup-cookie"
+
+- name: Install jdk .rpm 
+  become: yes
+  yum:
+    name: /opt/jdk-8u102-linux-x64.rpm
