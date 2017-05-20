@@ -1,0 +1,10 @@
+- name: Install go-server
+  become: yes
+  yum:
+    name: go-server-{{go_server_version}}
+
+- name: Start go server on default port
+  become: yes
+  service:
+    name: go-server
+    state: started

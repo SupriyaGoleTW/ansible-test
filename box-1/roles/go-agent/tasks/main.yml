@@ -1,0 +1,10 @@
+- name: Install go-agent
+  become: yes
+  yum:
+    name: go-agent-17.1.0
+
+- name: Start go agent
+  become: yes
+  service:
+    name: go-agent
+    state: started
