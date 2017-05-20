@@ -1,7 +1,7 @@
 - name: Install go-agent
   become: yes
   yum:
-    name: go-agent-17.1.0
+    name: go-agent-{{go_agent_version}}
 
 - name: Start go agent
   become: yes

@@ -1,8 +1,12 @@
 ---
-- hosts: webservers1
+- hosts: go-server
+  vars_files:
+    - ./configs/go_agent.yml
   roles:
     - go-server
 
-- hosts: webservers2
+- hosts: go-agent
+  vars_files:
+  - ./configs/go_agent.yml
   roles:
     - go-agent
